@@ -1,0 +1,24 @@
+table {
+  margin: auto;
+  width: 980px;
+  border-collapse: collapse;
+}
+
+table th {
+  text-align: center;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(249,249,249);
+}
+ul {
+  margin: 50px;
+}
+
+.ch {
+  margin: 50px;
+}
