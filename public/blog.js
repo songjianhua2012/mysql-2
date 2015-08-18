@@ -20,7 +20,7 @@ connectToMysql.prototype.close1 = function() {
   this.connection.end();
 };
 
-connectToMysql.prototype.getBlogEntries = function(sql) {
+connectToMysql.prototype.getBlogEntries = function(sql,func) {
     var that = this;
     this.connection.query(sql, function(err, rows, fields) {
     if (err) throw err;
@@ -30,11 +30,12 @@ connectToMysql.prototype.getBlogEntries = function(sql) {
   });
 };
 
-connectToMysql.prototype.delete = function(str) {
+connectToMysql.prototype.delete = function(str,func) {
       console.log(str);
       var that = this;
       this.connection.query(str, function(err, rows, fields) {
       if (err) throw err;
+      func(err,rows,fields);
   });
 };
 

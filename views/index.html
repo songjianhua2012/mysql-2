@@ -12,6 +12,9 @@
       <thead>
         <tr>
           <th data-test='name'>
+            学号
+          </th>
+          <th data-test='name'>
             姓名
           </th>
           <th data-test='chinese' data-flag=true>
@@ -29,6 +32,9 @@
         {{#each str}}
         <tr>
           <td>
+            {{id}}
+          </td>
+          <td>
             {{name}}
           </td>
           <td>
@@ -41,10 +47,7 @@
             {{english}}
           </td>
           <td>
-            <input type="button" data-fa='del' value="删除" data-name={{name}}>
-          </td>
-          <td>
-            <input type="button" data-fa='chec' value="查看" data-name={{name}}>
+            <input type="button" data-fa='del' value="删除" data-name={{id}} id="dele">
           </td>
         </tr>
         {{/each}}
@@ -56,12 +59,7 @@
       数学 <input type="text"/>
       英语 <input type="text"/> <input type="button" name="addStudentInfo" value="增加" id="add">
     </ul>
-    <ul class="ch">
-      姓名<input type="text" name="name"/>
-      语文 <input type="text"/>
-      数学 <input type="text"/>
-      英语 <input type="text"/><input type="button" name="checkStudentInfo" value="修改" id="change">
-    </ul>
+
   </body>
   <script type="text/javascript" src='sort.js'></script>
 </html>
